@@ -37,12 +37,12 @@ export default function Settings({ student, setStudent }) {
     localStorage.removeItem('skillup_student');
     localStorage.removeItem('skillup_preferences');
     if (setStudent) setStudent(createInitialStudentModel());
-    window.location.href = '/';
+    window.location.href = import.meta.env.BASE_URL;
   };
 
   const handleSignOut = () => {
     localStorage.removeItem('skillup_student');
-    window.location.href = '/';
+    window.location.href = import.meta.env.BASE_URL;
   };
 
   const prefSections = [
