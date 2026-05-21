@@ -16,7 +16,8 @@ export default function Layout({ children, student, activePage }) {
 
   const handleSignOut = () => {
     localStorage.removeItem('skillup_student');
-    window.location.href = '/';
+    // Menggunakan BASE_URL agar tidak error 404 saat di-hosting di GitHub Pages (subdirectory)
+    window.location.href = import.meta.env.BASE_URL;
   };
 
   const sidebarLinks = [
